@@ -1,0 +1,14 @@
+# https://alacritty.org/config-alacritty.html
+
+[window]
+opacity = 0.8
+padding = { x=10, y=10}
+decorations_theme_variant = "Dark"
+
+# [font]
+# normal.family = "Cascadia Code PL"
+# bold.family = "Cascadia Code PL"
+# italic.family = "Cascadia Code PL"
+# bold_italic.family = "Cascadia Code PL"
+# size = 15.0
+

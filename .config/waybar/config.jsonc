@@ -1,0 +1,112 @@
+{
+  //"layer": "top",
+  //"position": "bottom",
+  //"height": 30,
+  //"width": 1280,
+  "spacing": 10,
+  "output": ["DP-1"], 
+   
+  /////////////////
+  // Modules
+  /////////////////
+  
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/updates",
+  ],
+  
+  "modules-center": [
+    //"hyprland/window",
+    "clock",
+  ],
+
+  "modules-right": [
+    "network",
+    "cpu",
+    "temperature",
+    "memory",
+    "pulseaudio",
+    "custom/swaync",
+  ],
+  
+  /////////////////
+  // Configuration
+  ////////////////
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "format-window-separator": "\n",
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "8": "",
+      "9": "",
+      "10": "",
+      "active": "",
+      "default": "",
+    },
+  },
+  "network": {
+    "interface": "eno1",
+    "tooltip-format-ethernet": "{ifname} ",
+    "interval": 2,
+    "format": " {bandwidthDownBits}  {bandwidthUpBits}",
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip-format": "{:%A %d %B %Y}",
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "interval": 5,
+    "critical-threshold": 80,
+    "tooltip": false,
+    "format-icons": ["", "", ""]
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "custom/updates": {
+    "format": "<span color=\"#61afef\">󰚰 </span> {}",
+    "tooltip": false,
+    "interval": 60,
+    "exec": "exec $HOME/.config/waybar/scripts/checkupdate.sh"
+  },
+  "custom/swaync": {
+    "tooltip":true,
+    "text": "hello",     
+    "format": "{icon} {text}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+}
