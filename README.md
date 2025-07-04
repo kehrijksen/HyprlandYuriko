@@ -9,15 +9,3 @@ My Hyprland configuration featuring "Yuriko, the Tiger's Shadow"
 `git clone git@github.com:kehrijksen/HyprlandYuriko.git`
 
 `cp -R HyprlandYuriko/ ~/`
-
-## Programs
-1. hyprland
-1. hyprpaper
-1. hyprlock
-1. wofi
-1. waybar
-1. swaync
-1. hyprshot
-1. alacritty
-1. fish
-1. fastfetch
