@@ -5,7 +5,7 @@ My Hyprland configuration featuring "Yuriko, the Tiger's Shadow"
 
 ## Installation
 ```
-sudo pacman -S hyprland hyprpaper hyprlock wofi waybar swaync hyprshot alacritty fish fastfetch ttf-nerd-fonts-symbols otf-font-awesome
+sudo pacman -S hyprland hyprpaper hyprlock wofi waybar swaync hyprshot satty alacritty fish fastfetch ttf-nerd-fonts-symbols otf-font-awesome
 ```
 
 ```
