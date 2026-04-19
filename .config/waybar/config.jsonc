@@ -39,7 +39,6 @@
     "format": "{name}: {icon}",
     "format-icons": {
       "1": "",
-      "2": "",
       "8": "",
       "9": "",
       "10": "",
@@ -55,8 +54,8 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%H:%M:%S}",
-    "tooltip-format": "{:%A %d %B %Y}",
+    "format": "{:%a %H:%M:%S}",
+    "tooltip-format": "{:%d %B %Y}",
   },
   "cpu": {
     "format": " {usage}%",
