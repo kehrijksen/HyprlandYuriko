@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # install requirements
-sudo pacman -S hyprland hyprpaper hyprlock wofi waybar swaync hyprshot satty alacritty fish fastfetch ttf-nerd-fonts-symbols otf-font-awesome
+sudo pacman -S hyprland hyprpaper hyprlock wofi waybar swaync hyprsunset hyprshot satty alacritty fish fastfetch ttf-nerd-fonts-symbols otf-font-awesome gvfs
 
 # make backup
 BACKUP="$HOME/.config-backup-$(date +%Y%m%d-%H%M%S)"
