@@ -32,7 +32,7 @@ local browser 		= "firefox"
 -----------------
 
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & hyprpaper & swaync")
+  hl.exec_cmd("waybar & hyprpaper & swaync & hyprsunset")
   hl.exec_cmd("$HOME/.config/hypr/scripts/xdg-portal-hyprland.sh")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd(browser, { workspace = "1 silent" })
@@ -41,6 +41,12 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("sleep 10 && spotify-launcher", { workspace = "9 silent" })
   hl.exec_cmd("discord", { workspace = "10 silent" })
 end)
+
+hl.config({
+  input = {
+    numlock_by_default = true,
+  },
+})
 
 -----------------------------
 --- ENVIRONMENT VARIABLES ---
@@ -187,6 +193,7 @@ hl.bind(mainMod .. " + F9", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("~/.config/waybar/scripts/toggle.sh"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -C"))
 
 -- Tiles
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
